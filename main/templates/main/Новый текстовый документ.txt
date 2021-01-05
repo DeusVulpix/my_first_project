@@ -1,0 +1,10 @@
+# widgets = {
+        #     "title": TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'Input task name'
+        #     }),
+        #     "task": Textarea(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'Input dicription'
+        #     }),
+        # }

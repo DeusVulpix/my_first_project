@@ -1,0 +1,21 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+Products list
+{% endblock %}
+
+{% block content %}
+
+
+<form method="POST">
+
+    <h4>{% csrf_token%}{{ form.as_p }}</h4>
+
+<!--    all as paragraph-->
+    <input type='submit' value='Save' />
+</form>
+
+
+{% endblock %}
+
+

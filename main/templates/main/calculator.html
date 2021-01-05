@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Calculator
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="margin-bottom: 20rem;">
+    {% if error %}
+    <div class="row">
+        <div class="col-md-6" style="margin: 0 auto">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>x</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if result %}
+    <div class="row">
+        <div class="col-md-6" style="margin: 0 auto">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{q}} = {{ ans }}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>x</span>
+                </button>
+<!--                Хз почему. но кнопка закрытия дива пишется так-->
+            </div>
+        </div>
+    </div>
+    {% endif %}
+        <div class="row">
+            <div class="col-md-5" style="margin: 1rem auto 0 auto;">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="GET" action="{% url 'submit_query' %}">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="query" id="query">
+                            </div>
+                            <input type="submit" class="btn btn-success" value="RESULT">
+                            <input type="reset" class="btn btn-danger" value="RESET">
+                        </form>
+                </div>
+            </div>
+            </div>
+        </div>
+</div>
+{% endblock %}
+
+

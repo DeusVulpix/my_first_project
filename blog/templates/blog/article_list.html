@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Products list
+{% endblock %}
+
+{% block content %}
+
+{% for object in object_list %}
+     <p>{{ object.id }} - <a href='{{ object.absolute_url }}'>{{ object.title }}</a></p>
+{% endfor %}
+
+{% endblock %}
+
+

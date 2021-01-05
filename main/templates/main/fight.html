@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Fight
+{% endblock %}
+
+{% block content %}
+    <h1>fightinggold</h1>
+    <div class="row">
+        <div class="col-md-6" style="margin: 0 auto">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{% csrf_token %}{{ your_name_irl }}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'>x</span>
+                </button>
+            </div>
+        </div>
+    </div>
+<!--    <form method="POST" action="{% url 'fight'%}">-->
+<!--    <div class="form-group">-->
+<!--        <input type="text" class="form-control" name="your_n" id="your_n">-->
+<!--    </div>-->
+<!--        <input type="submit" class="btn btn-success" value="RESULT">-->
+<!--    </form>-->
+{% endblock %}
+
+

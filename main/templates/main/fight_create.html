@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Fight
+{% endblock %}
+
+{% block content %}
+<!--<form action="https://www.youtube.com/watch" method="GET"> dQw4w9WgXcQ-->
+<!--    <input type="text" name="v" placeholder="Your search">-->
+<form  method="POST" action="{% url 'fight_create' %}"> {% csrf_token %}
+    <input type="text" name="yours" placeholder="place_smth">
+    <input type="submit" value="save">
+</form>
+{% endblock %}
+
+

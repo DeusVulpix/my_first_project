@@ -1,0 +1,15 @@
+{% extends 'products/base.html' %}
+
+{% block title %}
+Products list
+{% endblock %}
+
+{% block content %}
+
+{% for instance in products_list %}
+     <p>{{ instance.id }} - <a href='{{ instance.absolute_url }}'>{{ instance.title }}</a></p>
+{% endfor %}
+
+{% endblock %}
+
+
