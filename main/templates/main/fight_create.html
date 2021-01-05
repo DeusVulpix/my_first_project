@@ -5,10 +5,9 @@ Fight
 {% endblock %}
 
 {% block content %}
+
 <form action="https://www.youtube.com/watch" method="GET">
 <input type="text" name="v" placeholder="Your search">
-<form  method="POST" action="https://www.youtube.com/watch?"> {% csrf_token %}
-    <input type="text" name="v" placeholder="Your search">
     <input type="submit" value="save">
 </form>
 {% endblock %}
